@@ -55,7 +55,7 @@ src/
 ### 1. Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/werdnarch/next-starter-temp.git
 cd next-starter
 npm install
 ```
