@@ -54,7 +54,7 @@ export function SignUpForm({
       password: "",
     },
   });
-  const signInWithGoogle = async () => {
+  const signUpWithGoogle = async () => {
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/dashboard",
@@ -94,7 +94,7 @@ export function SignUpForm({
                     variant="outline"
                     className="w-full"
                     type="button"
-                    onClick={signInWithGoogle}
+                    onClick={signUpWithGoogle}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path
