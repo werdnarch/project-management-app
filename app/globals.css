@@ -126,5 +126,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
-  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 400ms ease-in-out, color 400ms ease-in-out;
 }
