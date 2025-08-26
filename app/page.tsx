@@ -101,7 +101,7 @@ export default function Page() {
           <p>Build faster. Launch sooner. Scale smarter.</p>
         </div>
 
-        <div className="w-full grid grid-cols-3 gap-4">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[95%]">
           {tech.map((tech, index: number) => (
             <Link href={tech.link} key={`tech-${index}`}>
               <Technology
