@@ -2,11 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Providers from "@/components/providers";
-import { Inter } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
+import SideNav from "@/components/elements/SideNav";
 
 const InterFont = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const LatoFont = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,9 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased ${InterFont.variable}`}>
+      <body
+        className={`antialiased ${LatoFont.variable} ${InterFont.variable}`}
+      >
         <Providers>
-          {children}
+          <main className="h-full w-full flex items-center">
+            <SideNav />
+            <section className="h-full flex-1">{children}</section>
+          </main>
           <Toaster />
         </Providers>
       </body>

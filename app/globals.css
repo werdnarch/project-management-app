@@ -110,6 +110,7 @@
   --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
+  --container: #171717;
 }
 
 @layer base {
@@ -119,6 +120,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.logo {
+  font-family: var(--font-lato);
+}
+
+.container {
+  background-color: var(--container);
 }
 
 body {
