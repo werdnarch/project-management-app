@@ -76,6 +76,7 @@
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+  --container: #f8f9fa;
 }
 
 .dark {
@@ -128,6 +129,7 @@
 
 .container {
   background-color: var(--container);
+  transition: background 400ms ease-in-out, color 400ms ease-in-out;
 }
 
 body {

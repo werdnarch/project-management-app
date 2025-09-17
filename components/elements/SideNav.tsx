@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import NavItem from "./NavItem";
 import Link from "next/link";
 import {
@@ -12,10 +13,19 @@ import {
   Settings2Icon,
 } from "lucide-react";
 import ThemeToggle from "../ui/themeToggle";
+import { useSidebar } from "@/context/SideBarContext";
 
 export default function SideNav() {
+  const { sidebarOpen } = useSidebar();
+
   return (
-    <aside className="border-r-1 h-full  w-[20%] max-w-[350px] container flex flex-col ">
+    <aside
+      className={`border-r-1 h-full hidden w-[20%] ${
+        sidebarOpen
+          ? "max-w-[350px]"
+          : "max-w-[0] opacity-0 pointer-events-none"
+      }  container md:flex flex-col transition-all duration-300 ease-in-out `}
+    >
       <div className="w-full p-4 md:p-6 flex items-center gap-3 border-b-1">
         <div className="bg-[#00b4d8] p-2 aspect-square rounded-md text-sm flex items-center justify-center">
           &lt;/&gt;
@@ -51,6 +61,7 @@ export default function SideNav() {
           <Settings2Icon className="size-4" />
           <p>Settings</p>
         </Link>
+
         <ThemeToggle />
       </div>
     </aside>
