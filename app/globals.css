@@ -127,9 +127,8 @@
   font-family: var(--font-lato);
 }
 
-.container {
+.containers {
   background-color: var(--container);
-  transition: background 400ms ease-in-out, color 400ms ease-in-out;
 }
 
 body {

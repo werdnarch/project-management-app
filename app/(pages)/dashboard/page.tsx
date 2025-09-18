@@ -21,7 +21,7 @@ export default function Page() {
   if (isPending) return <Loading />;
 
   return (
-    <section className="h-full w-full flex flex-col p-4 md:p-8 lg:p-12 gap-4 md:gap-8 max-w-7xl mx-auto ">
+    <section className="h-full w-full flex flex-col p-4 md:p-8 lg:p-12 gap-4 md:gap-8 max-w-[1400px] mx-auto ">
       <NavIndicator />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 md:gap-8 ">
         <DashboardContainer
